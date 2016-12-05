@@ -41,6 +41,7 @@ public class QuickViewData {
 	private String dataPath;
 	private String timeInsert;
 	private double cloudPercent;
+	public int i =0;
 	
 	public String getDataId() {
 		return dataId;
