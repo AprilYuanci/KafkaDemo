@@ -1,0 +1,102 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f184cbb0330, pid=17495, tid=139741831759616
+#
+# JRE version: OpenJDK Runtime Environment (8.0_65-b17) (build 1.8.0_65-b17)
+# Java VM: OpenJDK 64-Bit Server VM (25.65-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libjdwp.so+0x29330]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f180c001000):  JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=17515, stack(0x00007f182e2e0000,0x00007f182e3e1000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f184cdc2740, RBX=0x00007f182e3dfdc0, RCX=0x00007f184f5185bb, RDX=0x00007f182e3dfd00
+RSP=0x00007f182e3dfce0, RBP=0x00007f182e3dfd20, RSI=0x0000000000000008, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x0000000000000008, R13=0x00007f184cdc2ee0, R14=0x00007f180c0019a0, R15=0x00007f180c001d78
+RIP=0x00007f184cbb0330, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f182e3dfce0)
+0x00007f182e3dfce0:   00007f182e3dfdca 00007f180c001d78
+0x00007f182e3dfcf0:   00007f182e3dfd20 00007f182e5e44f1
+0x00007f182e3dfd00:   00007f182e3dfdc0 364fa47bdac38d00
+0x00007f182e3dfd10:   00007f184cdc2ee0 00007f182e3dfdc0
+0x00007f182e3dfd20:   00007f182e3dfd60 00007f182e5e4ab9
+0x00007f182e3dfd30:   000000130c000b70 364fa47bdac38d00
+0x00007f182e3dfd40:   00007f182e3dfdc0 00007f182e3dfdc0
+0x00007f182e3dfd50:   0000000000000000 00007f184cdc2ee0
+0x00007f182e3dfd60:   00007f182e3dfd90 00007f184cbac4c3
+0x00007f182e3dfd70:   00007f1804000cb0 00007f1804000cb0
+0x00007f182e3dfd80:   00007f182e3dfdc0 00007f184cdc2ee0
+0x00007f182e3dfd90:   00007f182e3dfe00 00007f184cb986c0
+0x00007f182e3dfda0:   0000000000000000 00007f1804000b10
+0x00007f182e3dfdb0:   00007f180c001950 00007f180c001950
+0x00007f182e3dfdc0:   0000082200000013 00007f180c090b00
+0x00007f182e3dfdd0:   00007f1804000d40 364fa47bdac38d00
+0x00007f182e3dfde0:   00007f180c001000 00007f180c001000
+0x00007f182e3dfdf0:   00007f184eb05aac 00007f184eb010f0
+0x00007f182e3dfe00:   00007f182e3dfe30 00007f184e331c8b
+0x00007f182e3dfe10:   00007f182e3dfe30 00007f180c001000
+0x00007f182e3dfe20:   00007f182e3dfe60 00007f180c001990
+0x00007f182e3dfe30:   00007f182e3dfed0 00007f184e5da5fa
+0x00007f182e3dfe40:   00007f180c001990 00007f180c0019a0
+0x00007f182e3dfe50:   00007f180c001950 00000000000003d8
+0x00007f182e3dfe60:   00007f180c001000 00007f180c001d80
+0x00007f182e3dfe70:   00007f180c001dc0 00007f180c001dd0
+0x00007f182e3dfe80:   00007f180c001ea8 00000000000000d8
+0x00007f182e3dfe90:   00007f180c001fb0 364fa47bdac38d00
+0x00007f182e3dfea0:   00007f182e3dfed0 00007f180c002b10
+0x00007f182e3dfeb0:   00007f180c002a20 00007f180c001000
+0x00007f182e3dfec0:   00007f182e3e0700 0000000000100000
+0x00007f182e3dfed0:   00007f182e3dff10 00007f184e4900e2 
+
+Instructions: (pc=0x00007f184cbb0330)
+0x00007f184cbb0310:   25 28 00 00 00 48 89 45 e8 31 c0 85 f6 74 24 48
+0x00007f184cbb0320:   8d 05 ba 2b 21 00 48 8d 55 e0 48 8b 00 48 8b 38
+0x00007f184cbb0330:   48 8b 07 ff 90 68 01 00 00 85 c0 89 c3 75 21 48
+0x00007f184cbb0340:   8b 45 e0 48 8b 4d e8 64 48 33 0c 25 28 00 00 00 
+
+Register to memory mapping:
+
+RAX=0x00007f184cdc2740: <offset 0x23b740> in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/lib/amd64/libjdwp.so at 0x00007f184cb87000
+RBX=0x00007f182e3dfdc0 is pointing into the stack for thread: 0x00007f180c001000
+RCX=0x00007f184f5185bb: recv+0x7b in /lib64/libpthread.so.0 at 0x00007f184f50a000
+RDX=0x00007f182e3dfd00 is pointing into the stack for thread: 0x00007f180c001000
+RSP=0x00007f182e3dfce0 is pointing into the stack for thread: 0x00007f180c001000
+RBP=0x00007f182e3dfd20 is pointing into the stack for thread: 0x00007f180c001000
+RSI=0x0000000000000008 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000000008 is an unknown value
+R13=0x00007f184cdc2ee0: <offset 0x23bee0> in /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64/jre/lib/amd64/libjdwp.so at 0x00007f184cb87000
+R14=0x00007f180c0019a0 is an unknown value
+R15=0x00007f180c001d78 is an unknown value
+
+
+Stack: [0x00007f182e2e0000,0x00007f182e3e1000],  sp=0x00007f182e3dfce0,  free space=1023k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjdwp.so+0x29330]
+C  [libdt_socket.so+0x1ab9]
+C  [libjdwp.so+0x254c3]
+C  [libjdwp.so+0x116c0]
+V  [libjvm.so+0x708c8b]
+V  [libjvm.so+0x9b15fa]
+V  [libjvm.so+0x8670e2]
+C  [libpthread.so.0+0x7dc5]
