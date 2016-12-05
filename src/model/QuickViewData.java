@@ -40,6 +40,7 @@ public class QuickViewData {
 	private boolean vectrevised;
 	private String dataPath;
 	private String timeInsert;
+	private double cloudPercent;
 	
 	public String getDataId() {
 		return dataId;
@@ -257,6 +258,12 @@ public class QuickViewData {
 	}
 	public void setSouthLat(double southLat) {
 		this.southLat = southLat;
+	}
+	public double getCloudPercent() {
+		return cloudPercent;
+	}
+	public void setCloudPercent(double cloudPercent) {
+		this.cloudPercent = cloudPercent;
 	}
 	
 }
